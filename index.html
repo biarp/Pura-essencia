@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pura Essência Calçados</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Pura Essência</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="nav-link" data-page="home">Início</a></li>
+                    <li><a href="#produtos" class="nav-link" data-page="produtos">Produtos</a></li>
+                    <li><a href="#adicionar-produto" class="nav-link" data-page="adicionar-produto">Adicionar Produto</a></li>
+                    <li><a href="#pagamento" class="nav-link" data-page="pagamento">Pagamento</a></li>
+                    <li><a href="#contato" class="nav-link" data-page="contato">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="cart">
+                <a href="#carrinho" class="cart-icon nav-link" data-page="carrinho"><img src="https://via.placeholder.com/24?text=🛒" alt="Carrinho"></a>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="page-section active">
+            <div class="hero">
+                <div class="container">
+                    <h2>Pura Essência Calçados: Onde cada passo é uma declaração de estilo.</h2>
+                    <p>Descubra a coleção perfeita que combina estilo, conforto e exclusividade.</p>
+                    <div class="hero-buttons">
+                        <a href="#produtos" class="btn nav-link" data-page="produtos">Explorar Produtos</a>
+                        <a href="#cadastro" class="btn btn-secondary nav-link" data-page="cadastro">Cadastre-se Agora!</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="produtos" class="page-section">
+            <div class="products container">
+                <h2>Nossos Produtos</h2>
+                <div class="product-grid">
+                    </div>
+            </div>
+        </section>
+
+        <section id="adicionar-produto" class="page-section">
+            <div class="add-product-section container">
+                <h2>Adicionar Novo Produto</h2>
+                <form id="add-product-form">
+                    <div class="form-group">
+                        <label for="new-product-name">Nome do Sapato:</label>
+                        <input type="text" id="new-product-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="new-product-price">Preço (R$):</label>
+                        <input type="number" id="new-product-price" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="new-product-image">URL da Imagem:</label>
+                        <input type="text" id="new-product-image" placeholder="Ex: https://exemplo.com/sapato.jpg">
+                    </div>
+                    <button type="submit" class="btn">Adicionar Produto</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="carrinho" class="page-section">
+            <div class="cart-section container">
+                <h2>Seu Carrinho de Compras</h2>
+                <div id="cart-items-list">
+                    </div>
+                <div class="cart-summary">
+                    <p>Total: <span id="cart-total">R$ 0,00</span></p>
+                    <button id="checkout-btn" class="btn">Finalizar Compra</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="pagamento" class="page-section">
+            <div class="payment-section container">
+                <h2>Finalizar Compra</h2>
+                <p class="warning-message">
+                    <strong>ATENÇÃO:</strong> Este é um formulário de pagamento **simulado** e **não processa transações reais**.
+                    **NÃO INSIRA DADOS DE CARTÃO DE CRÉDITO VERDADEIROS AQUI.**
+                    É apenas para demonstração de interface.
+                </p>
+                <form id="payment-form">
+                    <h3>Resumo do Pedido</h3>
+                    <div id="payment-cart-items-list" class="payment-cart-items-list">
+                        </div>
+                    <div class="payment-cart-summary">
+                        <p>Total a Pagar: <span id="payment-cart-total">R$ 0,00</span></p>
+                    </div>
+
+                    <h3>Detalhes do Pagamento</h3>
+                    <div class="form-group">
+                        <label for="card-number">Número do Cartão:</label>
+                        <input type="text" id="card-number" placeholder="XXXX XXXX XXXX XXXX" maxlength="19" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expiry-date">Validade (MM/AA):</label>
+                            <input type="text" id="expiry-date" placeholder="MM/AA" maxlength="5" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV:</label>
+                            <input type="text" id="cvv" placeholder="XXX" maxlength="4" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="card-name">Nome no Cartão:</label>
+                        <input type="text" id="card-name" required>
+                    </div>
+                    <button type="submit" class="btn">Pagar</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="cadastro" class="page-section">
+            <div class="registration-section container">
+                <h2>Crie sua Conta</h2>
+                <p>Junte-se à Pura Essência Calçados e desfrute de ofertas exclusivas!</p>
+                <form id="registration-form">
+                    <div class="form-group">
+                        <label for="reg-name">Nome Completo:</label>
+                        <input type="text" id="reg-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-email">E-mail:</label>
+                        <input type="email" id="reg-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-password">Senha:</label>
+                        <input type="password" id="reg-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-confirm-password">Confirmar Senha:</label>
+                        <input type="password" id="reg-confirm-password" required>
+                    </div>
+                    <button type="submit" class="btn">Cadastrar</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="contato" class="page-section">
+            <div class="contact container">
+                <h2>Entre em Contato</h2>
+                <p>Fale conosco para dúvidas, sugestões ou suporte:</p>
+                <ul>
+                    <li>Email: contato@puraessenciacalcados.com.br</li>
+                    <li>Telefone: (41) 3344-5566</li>
+                    <li>WhatsApp: (41) 98765-4321</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Pura Essência Calçados. Descubra a sua essência em cada par.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
